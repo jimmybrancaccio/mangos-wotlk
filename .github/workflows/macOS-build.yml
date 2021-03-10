@@ -46,7 +46,11 @@ jobs:
           cmake ../mangos-wotlk -DCMAKE_INSTALL_PREFIX=../_install -DDEBUG=0 -DBUILD_PLAYERBOT=ON -DBUILD_AHBOT=ON -DBUILD_EXTRACTORS=ON
         
       - name: Run make
-        run: make -j2
+        run: |
+          cd /Users/runner/work/mangos-wotlk/_build
+          make -j2
         
       - name: Run make install
-        run: make install
+        run: |
+          cd /Users/runner/work/mangos-wotlk/_build
+          make install
