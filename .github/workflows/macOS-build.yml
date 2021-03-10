@@ -33,13 +33,14 @@ jobs:
           
       - name: Create Directories
         run: |
+          cd /Users/runner/work/mangos-wotlk
           mkdir _build
           mkdir _install
           
       - name: Run cmake
         run: |
           cd _build
-          cmake ../mangos-wotlk -DCMAKE_INSTALL_PREFIX=\../_install -DPCH=1 -DDEBUG=0 -DBUILD_PLAYERBOT=ON -DBUILD_AHBOT=ON -DBUILD_EXTRACTORS=ON
+          cmake -DCMAKE_INSTALL_PREFIX=../_install -DDEBUG=0 -DBUILD_PLAYERBOT=ON -DBUILD_AHBOT=ON -DBUILD_EXTRACTORS=ON
         
       - name: Run make
         run: make -j2
