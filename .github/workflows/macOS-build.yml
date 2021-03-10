@@ -30,9 +30,9 @@ jobs:
         with:
           fetch-depth: 1
           
-      - name: Install MySQL Client
+      - name: Install some dependencies
         run: |
-          brew install mysql-client@5.7
+          brew install boost mysql@5.7 mysql-client@5.7
           
       - name: Create Directories
         run: |
