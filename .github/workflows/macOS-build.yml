@@ -33,6 +33,7 @@ jobs:
           
       - name: Create Directories
         run: |
+          cd mangos-wotlk
           mkdir _build
           mkdir _install
           cd _build
