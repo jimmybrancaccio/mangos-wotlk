@@ -92,18 +92,6 @@ matrix:
 #        - PATH=${DEPS_DIR}/cmake-install:${DEPS_DIR}/cmake-install/bin:$PATH
 #        - cd ${TRAVIS_BUILD_DIR}
 
-    # osx builds on clang x64
-    - os: osx
-      osx_image: xcode10.2
-      arch: amd64
-      compiler: clang
-      env:
-        - MYSQL_HOME=/usr/local/opt/mysql-client@5.7
-      install:
-        - brew install mysql-client@5.7
-        - export OPENSSL_ROOT_DIR=$(brew --prefix openssl)
-        - brew upgrade cmake
-
 script: |-
   cmake --version
   mkdir _build
