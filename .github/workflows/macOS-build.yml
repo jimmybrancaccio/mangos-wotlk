@@ -33,6 +33,7 @@ jobs:
       - name: Install some dependencies
         run: |
           brew install boost mysql@5.7 mysql-client@5.7
+          brew upgrade openssl
           
       - name: Create Directories
         run: |
