@@ -18,7 +18,7 @@ jobs:
     
     # Setup some environment variables.
     env:
-      OPENSSL_ROOT_DIR: $(brew --prefix openssl)
+      OPENSSL_ROOT_DIR: /usr/local/opt/openssl@1.1
       MYSQL_HOME: /usr/local/opt/mysql-client@5.7
       CCACHE_SLOPPINESS: pch_defines,time_macros
     
